@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>Esempio</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>contextp</param-name>
+  	<param-value>Parametro di contesto</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>parametri</servlet-name>
+  	<jsp-file>/TestParam.jsp</jsp-file>
+  	<init-param>
+  		<param-name>initp</param-name>
+  		<param-value>Paramentro di inizializzazione</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>parametri</servlet-name>
+  	<url-pattern>/TestParam.jsp</url-pattern> 
+  </servlet-mapping>
+  <listener>
+  	<listener-class>com.simone.listener.ContextListener</listener-class>
+  </listener>
+</web-app>

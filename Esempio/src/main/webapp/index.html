@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Leggere richieste multi</title>
+</head>
+<body>
+	<form action ="/Esempio/letturaParam" method ="post">
+		<table>
+			<tr>
+				<td style="width:300px;">Codice Articolo</td>
+				<td style="width:300px;"><input type="text" name="articolo" required></td>
+			</tr>
+			<tr>
+				<td>Quantit&agrave;</td>
+				<td><input type="number" name="qta" required></td>
+			</tr>
+			<tr>
+				<td>Prezzo</td>
+				<td><input type="number" name="prezzo" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>Indirizzo di spedizione</td>
+				<td><textarea name="indirizzo" rows="3" cols="60" style="resize: none"></textarea></td>
+			</tr>
+			<tr>
+				<td>Carta di credito</td>
+				<td>
+					<select name="carta">
+						<option value="Postepay">Postepay</option>
+						<option value="American Express">American Express</option>
+						<option value="Master Card">Master Card</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Extra</td>
+				<td>
+					<input type="checkbox" name="scelta" value="regalo">Regalo<br>
+					<input type="checkbox" name="scelta" value="buono">Buono<br>
+					<input type="checkbox" name="scelta" value="Cliente Prime">Cliente Prime<br>
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="conferma ordine">
+		<p>
+			<a href="/Esempio/redirect?page=ibm">IBM</a><br>
+			<a href="/Esempio/redirect?page=hp">HP</a><br>
+			<a href="/Esempio/redirect?page=tasgroup">Tasgroup</a><br>
+		</p>
+		<p>
+			<a href="/Esempio/headerHTTP">Header</a><br>
+		</p>
+	</form>	
+	<form action="intercetta jsp" method="post">
+		<input type="text" name="nome"><br>
+		<input type="text" name="cognome"><br>
+		<input type="submit" name="invia">	
+	</form>			
+</body>
+</html>
